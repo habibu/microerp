@@ -1,0 +1,11 @@
+Manifest-Version: 1.0
+Implementation-Title: service.api
+Implementation-Version: 1.0.0.BUILD-SNAPSHOT
+Built-By: lifodx
+Implementation-Vendor-Id: com.habibu
+Build-Jdk: 1.8.0_222
+Implementation-URL: http://platform.spring.io/platform/northwind/servi
+ ce.api/
+Created-By: Maven Integration for Eclipse
+Implementation-Vendor: Pivotal Software, Inc.
+
