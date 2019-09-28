@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en" data-layout-decorate="~{layouts/default-list-layout}">
+    <head id="head">
+
+    <title data-th-text="|#{label_show_entity(#{label_orderdetail})}|">Show OrderDetail - Spring Roo application</title>
+
+  </head>
+
+  <body id="body">
+
+    <header role="banner">
+      <!-- Content replaced by layout of the page displayed -->
+    </header>
+
+    <!--CONTAINER-->
+    <div class="container bg-container">
+      <!-- CONTENT -->
+      <!--
+        Only the inner content of the following tag "section" is included
+        within the template, in the section "content"
+      -->
+      <section data-th-fragment="inline-content" data-layout-fragment="content" data-th-object="${orderDetail}">
+        <div>
+
+          <!-- CONTENT -->
+            <div id="mainEntityFieldSet">
+              <ul class="list-unstyled" id="containerFields">
+                  <li id="orderdetail-customerorder-field" data-z="5479c58a">
+            	      <strong data-th-text="#{label_orderdetail_customerorder}">customerOrder</strong>
+                    <span data-th-text="*{{customerOrder}}">customerOrderValue</span>
+         	        </li>
+                  <li id="orderdetail-product-field" data-z="fce2e60a">
+            	      <strong data-th-text="#{label_orderdetail_product}">product</strong>
+                    <span data-th-text="*{{product}}">productValue</span>
+         	        </li>
+                  <li id="orderdetail-unitprice-field" data-z="297e746a">
+            	      <strong data-th-text="#{label_orderdetail_unitprice}">unitPrice</strong>
+                    <span data-th-text="*{{unitPrice}}">unitPriceValue</span>
+         	        </li>
+                  <li id="orderdetail-quantity-field" data-z="aa282cd4">
+            	      <strong data-th-text="#{label_orderdetail_quantity}">quantity</strong>
+                    <span data-th-text="*{{quantity}}">quantityValue</span>
+         	        </li>
+                  <li id="orderdetail-discount-field" data-z="8e68ee14">
+            	      <strong data-th-text="#{label_orderdetail_discount}">discount</strong>
+                    <span data-th-text="*{{discount}}">discountValue</span>
+         	        </li>
+              </ul>
+            </div>
+
+        </div>
+
+      </section>
+      <!-- /CONTENT -->
+  </div>
+  <!-- /CONTAINER -->
+
+  <footer class="container">
+    <!-- Content replaced by layout of the page displayed -->
+  </footer>
+
+  <!-- JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so that the pages load faster -->
+  <!-- JavaScript loaded by layout of the page displayed -->
+  <!--
+       Only the inner content of the following tag "javascript" is included
+       within the template, in the div "javascript"
+      -->
+  <div data-layout-fragment="javascript">
+  </div>
+
+  </body>
+
+</html>

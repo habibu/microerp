@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en" data-layout-decorate="~{layouts/default-list-layout}">
+  <head id="head">
+
+    <title data-th-text="|#{label_show_entity(#{label_party})}|">Show Party - Spring Roo application</title>
+
+  </head>
+
+  <body id="body">
+
+    <header role="banner">
+      <!-- Content replaced by layout of the page displayed -->
+    </header>
+
+    <!--CONTAINER-->
+    <div class="container bg-container">
+      <!-- CONTENT -->
+      <!--
+        Only the inner content of the following tag "section" is included
+        within the template, in the section "content"
+      -->
+      <section data-layout-fragment="content" data-th-object="${party}">
+        <div class="container-fluid content">
+
+          <!-- CONTENT -->
+          <h1 data-th-text="#{label_show_entity(#{label_party})}">Show Party</h1>
+
+            <div id="mainEntityFieldSet">
+              <h2 data-th-text="#{label_data_entity(#{label_party})}">Party data</h2>
+              <ul class="list-unstyled" id="containerFields">
+                  <li id="party-city-field" data-z="a0863b9b">
+            	      <strong data-th-text="#{label_party_city}">city</strong>
+                    <span data-th-text="*{{city}}">cityValue</span>
+         	        </li>
+                  <li id="party-country-field" data-z="6a27b83">
+            	      <strong data-th-text="#{label_party_country}">country</strong>
+                    <span data-th-text="*{{country}}">countryValue</span>
+         	        </li>
+                  <li id="party-address-field" data-z="b7ab67c3">
+            	      <strong data-th-text="#{label_party_address}">address</strong>
+                    <span data-th-text="*{{address}}">addressValue</span>
+         	        </li>
+                  <li id="party-postalcode-field" data-z="6b79fd1b">
+            	      <strong data-th-text="#{label_party_postalcode}">postalCode</strong>
+                    <span data-th-text="*{{postalCode}}">postalCodeValue</span>
+         	        </li>
+                  <li id="party-phone-field" data-z="34044983">
+            	      <strong data-th-text="#{label_party_phone}">phone</strong>
+                    <span data-th-text="*{{phone}}">phoneValue</span>
+         	        </li>
+                  <li id="party-region-field" data-z="d3daf77b">
+            	      <strong data-th-text="#{label_party_region}">region</strong>
+                    <span data-th-text="*{{region}}">regionValue</span>
+         	        </li>
+              </ul>
+            </div>
+
+
+          <div class="clearfix">
+            <div class="pull-right">
+             <a id="Party_edit" href="edit.html" class="btn btn-primary" data-th-title="#{label_goEdit}" data-th-href="${@linkBuilder.of('PartiesItemThymeleafController').to('editForm').with('party', party.id)}" data-th-text="#{label_edit}">Edit</a>
+            </div>
+          </div>
+
+
+          <div class="clearfix">
+            <div class="pull-left">
+              <a id="Party_list" href="list.html" class="btn btn-default" data-th-title="#{label_goBack}" data-th-href="${@linkBuilder.of('PartiesCollectionThymeleafController').to('list')}">
+  	             <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+  	             <span data-th-text="#{label_back}">Back</span>
+  	          </a>
+            </div>
+          </div>
+        </div>
+
+      </section>
+      <!-- /CONTENT -->
+  </div>
+  <!-- /CONTAINER -->
+
+  <footer class="container">
+    <!-- Content replaced by layout of the page displayed -->
+  </footer>
+
+  <!-- JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so that the pages load faster -->
+  <!-- JavaScript loaded by layout of the page displayed -->
+  <!--
+       Only the inner content of the following tag "javascript" is included
+       within the template, in the div "javascript"
+      -->
+  <div data-layout-fragment="javascript">
+  </div>
+
+  </body>
+
+</html>

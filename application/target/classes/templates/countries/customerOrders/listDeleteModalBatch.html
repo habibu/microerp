@@ -1,0 +1,24 @@
+<!--TABLE-->
+<div class="table-responsive" id="containerFields" data-th-fragment="customerorders-detailModalConfirmBody" data-th-with="collectionLink=${@linkBuilder.of('CountriesItemCustomerOrdersThymeleafController')}">
+    <table id="customerorders-detail-table-items-to-remove-batch" data-parent-table="country-entity-table" data-data-parent-id="${country != null ? country.id : ''}" data-data-load-url="${collectionLink.to('datatablesByIdsIn').with('country', '_PARENTID_')}">
+      <thead>
+        <tr>
+              <th data-data="city" data-th-text="#{label_country_customerorders_city}">city</th>
+              <th data-data="country" data-th-text="#{label_country_customerorders_country}">country</th>
+              <th data-data="customer" data-th-text="#{label_country_customerorders_customer}">customer</th>
+              <th data-data="orderDate" data-th-text="#{label_country_customerorders_orderdate}">orderDate</th>
+              <th data-data="requiredDate" data-th-text="#{label_country_customerorders_requireddate}">requiredDate</th>
+        </tr>
+      </thead>
+      <tbody data-th-remove="all">
+        <tr>
+              <td>city</td>
+              <td>country</td>
+              <td>customer</td>
+              <td>orderDate</td>
+              <td>requiredDate</td>
+        </tr>
+      </tbody>
+    </table>
+</div>
+<!-- /TABLE -->
